@@ -53,7 +53,7 @@ const productos = [
 ]
 
 // --------------
-
+/*
 const circuitos = [ // agregar: vueltas, longitud, y fecha de gp
 
         {
@@ -188,4 +188,4 @@ const circuitos = [ // agregar: vueltas, longitud, y fecha de gp
             circuit: "Yas Marina",
             precio: ''
         }
-]
+]*/

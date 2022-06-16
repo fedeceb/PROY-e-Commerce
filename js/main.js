@@ -102,5 +102,6 @@ function registroUsuario ()
 
     let datoContraseña = Number(prompt("Ingresa contraseña (solo numerica)"));
     localStorage.setItem("CLAVE", datoContraseña);
+
 }
 
