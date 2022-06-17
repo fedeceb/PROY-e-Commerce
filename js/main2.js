@@ -1,12 +1,14 @@
 // ------F1 eShop -------
 
-const eCarrito = new Carrito ([]);
+//const eCarrito = new Carrito ([]);
 
 inicializarApp();
 
 function inicializarApp ()
 {
     botonShop ();
+    //botonTicket ();
+    //botonRegistrarse ();
 }
 
 function botonShop ()
@@ -20,17 +22,17 @@ function botonShop ()
 
 function cargarShops ()
 {
-    fetch(`js/data/productos.data.js`)
+    fetch("../js/data/productos.data.json")
     .then((response) => response.json())
     .then((json) => mostrarProductos(json))
-    .catch(() => alert("intente de nuevo"))
+    //.catch(() => alert("intente de nuevo"))
 }
 
-function mostrarProductos(data)
+function mostrarProductos(productos)
 {
-    const divProd = document.createElement("prodContainer");
-    divProd.innerText = "";
-    data.forEach(eShop => {
+    const div = document.createElement("div");
+    div.innerText = "";
+    productos.forEach(eShop => {
 
         const { image, model, precio, id} = eShop
 //agregar imagen!!
@@ -42,23 +44,23 @@ function mostrarProductos(data)
         btn.innerText = "Agregar al carrito"
         btn.addEventListener("click", () =>
             
-            cargarProds(id)
+            cargarProds(id, productos)
         );
         divShop.appendChild(btn);
-        divProd.appendChild(divShop)
+        div.appendChild(divShop)
+
     })
+    document.body.appendChild(div);
 }
 
-async function cargarProds (id) 
+ function cargarProds (id, productos) 
 {
-    try {
-        let response = await fetch (`js/data/productos.data.js/${id}`);
-        let json = await response.json();
-        mostrarPost(json)
-    }
-    catch {
-        alert("error!!");
-    }
+   const objet = productos.find((producto)=> {
+    return producto.id===id
+   })
+   
+   
+    console.log(objet)
 }
 
 function mostrarPost (post) 
