@@ -3,61 +3,61 @@
     {
         "id":1,
         "model": "Alfa Romeo",
-        "precio":"$15000",
+        "precio": "1500",
         "image":"https://www.formula1.com/content/dam/fom-website/teams/2022/alfa-romeo.png.transform/6col/image.png"
     },
     {
         "id":2,
         "model": "Aston Martin",
-        "precio": "",
+        "precio": "1500",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/aston-martin.png.transform/6col/image.png"
     },
     {
         "id":3,
         "model": "McLaren",
-        "precio": "",
+        "precio": "1800",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/mclaren.png.transform/6col/image.png"
     },
     {
         "id":4,
         "model": "Williams",
-        "precio": "",
+        "precio": "1500",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/williams.png.transform/6col/image.png"
     },
     {
         "id":5,
         "model": "Alfa Tauri",
-        "precio": "",
+        "precio": "1800",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/alphatauri.png.transform/6col/image.png"
     },
     {
         "id":6,
         "model": "Ferrari",
-        "precio": "",
+        "precio": "2000",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/ferrari.png.transform/6col/image.png"
     },
     {
         "id":7,
         "model": "Mercedes",
-        "precio": "",
+        "precio": "2000",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/mercedes.png.transform/6col/image.png"
     },
     {
         "id":8,
         "model": "Alpine",
-        "precio": "",
+        "precio": "1800",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/alpine.png.transform/6col/image.png"
     },
     {
         "id":9,
         "model": "Haas",
-        "precio": "",
+        "precio": "1500",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/haas-f1-team.png.transform/6col/image.png"
     },
     {
         "id":10,
         "model": "Red Bull",
-        "precio": "",
+        "precio": "2500",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/red-bull-racing.png.transform/6col/image.png"
     }
 ]

@@ -43,10 +43,10 @@ function mostrarProductos(productos)
         const divShop = document.createElement("div");
         divShop.innerHTML =`<img src='${image}'/><br>
                             <h2>${model}</h2><br>
-                            <p>${precio}</p><br>`
+                            <p>$${precio}</p><br>`
 
         const btn = document.createElement("button")
-        btn.innerText = "Agregar al carrito"
+        btn.innerHTML = "Agregar al carrito"
         btn.addEventListener("click", () =>{
             const productoParaCarrito = {
                 ...eShop,
@@ -55,6 +55,7 @@ function mostrarProductos(productos)
 
             eCarrito.agregarProducto(productoParaCarrito);
             cargarProds(id, productos);
+            mostrarCarrito();
             console.log("carrito", eCarrito);
         });
 
@@ -99,12 +100,12 @@ function mostrarCarrito ()
 
         const { image, model, precio} = eShop
 
-        div.innerHTML= `<img src='${image}'/><br>
+        div.innerHTML= `<img src='${image}' width="200px"/><br>
                         ${model}<br>
                         $${precio*eShop.cantidad}<br>
                         Cantidad: ${eShop.cantidad}`
 
-        const btnBorrar = document.createElement("button");
+       const btnBorrar = document.createElement("button");
         btnBorrar.innerHTML = "Borrar articulo"
         btnBorrar.addEventListener("click", () =>{
             borrarProducto(eShop);
@@ -117,7 +118,7 @@ function mostrarCarrito ()
     totalCarrito ();
 }
 
-function totalCarrito() //crear un div en index; problema en divTotal
+function totalCarrito() //crear un div en index
 {
     const divTotal = document.getElementById("totalcarrito");
     divTotal.innerHTML = "";
@@ -142,6 +143,6 @@ function progVaciarCarrito () //crear btn en index
 
 function borrarProducto (producto)
 {
-    eCarrito.borrarProducto (producto);
+    eCarrito.borrarProducto(producto);
     mostrarCarrito ();
 }

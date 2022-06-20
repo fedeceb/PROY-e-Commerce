@@ -5,17 +5,17 @@ class Carrito {
         this.productos = productos;
     }
 
-    agregarProducto(productos)
+    agregarProducto(producto)
     {
-        const esta = this.productos.find(eShop=>productos.id===eShop.id);
+        const esta = this.productos.find(eShop=>producto.id===eShop.id);
 
         if (esta)
         {
-            esta.cantidad = productos.cantidad + esta.cantidad
+            esta.cantidad = producto.cantidad + esta.cantidad
         }
         else 
         {
-            this.productos.push(productos);
+            this.productos.push(producto);
         }
     }
 
@@ -36,11 +36,11 @@ class Carrito {
 
     borrarProducto(producto)
     {
-        const prodBorar = this.productos.find(eShop=>producto.id===eShop.id);
+        const prodBorrar = this.productos.find(eShop=>producto.id===eShop.id);
         console.log("prod a borrar");
-        console.log(prodBorar);
+        console.log(prodBorrar);
 
-        const index = this.productos.indexOf(prodBorar);
+        const index = this.productos.indexOf(prodBorrar);
 
         this.productos.splice(index,1);
     }
