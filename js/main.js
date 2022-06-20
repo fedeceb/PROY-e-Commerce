@@ -1,107 +1,147 @@
-// ----- F1 - SHOP -------
+// ------F1 eShop -------
 
-console.log(productos);
-console.log(circuitos);
+const eCarrito = new Carrito ([]);
 
+inicializarApp();
 
-inicializarApp ();
-
-function inicializarApp()
+function inicializarApp ()
 {
-    crearTitulo ();
-    crearMenu ();
+    botonShop ();
+    //botonTicket ();
+    //botonRegistrarse ();
+    totalCarrito ();
+    btnsCarrito ();
 }
 
+// FUNCIONES INICIALES
 
-function listaShop ()
+function botonShop ()
 {
-    const liShop = document.createElement("ul");
-
-    productos.forEach((producto) =>{
-        const nodoli = document.createElement("li");
-        nodoli.innerHTML = `${producto.model}`;
-        liShop.appendChild(nodoli);
-    });
-    document.body.appendChild(liShop);
-}
-
-
-// ------- EVENTOS --------
-
-function crearTitulo()
-{
-    const tituloH1 = document.createElement("h1");
-    tituloH1.innerHTML = "F1 store";
-
-    tituloH1.classList.add("miTitulo");
-
-    document.body.appendChild(tituloH1);
-}
-
-function crearMenu() 
-{
-    const opciones = ["SHOP", "TICKETS","REGISTRARSE"]
-    opciones.forEach((opcion)=>{
-        const boton = document.createElement("button");
-
-        if (opcion === "SHOP")
-        {
-            boton.addEventListener("click", ()=>{
-                listaShop ();
-            })
-        }
+    const btn = document.getElementById("idshop");
+    btn.addEventListener("click", () =>{
         
-        if (opcion === "TICKETS")
-        {
-            boton.addEventListener("click", ()=>{
-                listaTickets ();
-            })
-        }
-
-        else if (opcion === "REGISTRARSE")
-        {
-            boton.addEventListener("click", ()=>{
-                registroUsuario();
-            })
-        }
-
-        boton.innerHTML = opcion;
-        document.body.appendChild(boton);
+        cargarShops ();
     })
 }
 
-function listaTickets()
+function cargarShops ()
 {
-    const liTickets = document.createElement("ul");
+    fetch("../js/data/productos.data.json")
+    .then((response) => response.json())
+    .then((json) => mostrarProductos(json))
+    //.catch(() => alert("intente de nuevo"))
+}
+
+function mostrarProductos(productos)
+{
+    const div = document.createElement("div");
+    div.innerText = "";
+    productos.forEach(eShop => {
+
+        const { image, model, precio, id} = eShop
+
+        const divShop = document.createElement("div");
+        divShop.innerHTML =`<img src='${image}'/><br>
+                            <h2>${model}</h2><br>
+                            <p>${precio}</p><br>`
+
+        const btn = document.createElement("button")
+        btn.innerText = "Agregar al carrito"
+        btn.addEventListener("click", () =>{
+            const productoParaCarrito = {
+                ...eShop,
+                cantidad:1,
+            }
+
+            eCarrito.agregarProducto(productoParaCarrito);
+            cargarProds(id, productos);
+            console.log("carrito", eCarrito);
+        });
+
+        divShop.appendChild(btn);
+        div.appendChild(divShop)
+
+    })
+    document.body.appendChild(div);
+}
+
+function cargarProds (id, productos) 
+{
+   const objet = productos.find((producto)=> {
+    return producto.id===id
+   })
+   
+    console.log(objet)
+}
+
+/*function mostrarPost (post) 
+{
+    const {image, model, precio} = post;
+
+    const divProd = document.createElement("prodContainer");
+    divProd.innerText = "";
+//agregar imagen!!
+    const divShop = document.createElement("div");
+    divShop.innerHTML =`<h2>${model}</h2>
+                        <p>${precio}</p>`
+
+    divProd.appendChild(divShop);
+}*/
+
+// funciones de compra
+
+function mostrarCarrito ()
+{
+    const divCarrito = document.getElementById("ecarrito");
+    divCarrito.innerHTML="";
+    eCarrito.productos.forEach(eShop =>{
+        const div = document.createElement("div");
+
+        const { image, model, precio} = eShop
+
+        div.innerHTML= `<img src='${image}'/><br>
+                        ${model}<br>
+                        $${precio*eShop.cantidad}<br>
+                        Cantidad: ${eShop.cantidad}`
+
+        const btnBorrar = document.createElement("button");
+        btnBorrar.innerHTML = "Borrar articulo"
+        btnBorrar.addEventListener("click", () =>{
+            borrarProducto(eShop);
+        })
+        div.appendChild(btnBorrar);
+
+        divCarrito.appendChild(div);
+    })
     
-    circuitos.forEach((circuito) =>{
-        const nodoli = document.createElement("li");
-        nodoli.innerHTML = `${circuito.circuit}`;
-        liTickets.appendChild(nodoli);
-    });
-    document.body.appendChild(liTickets);
+    totalCarrito ();
 }
 
-function buscarProds ()
+function totalCarrito() //crear un div en index; problema en divTotal
 {
-    let nombre = prompt("Ingresar producto");
+    const divTotal = document.getElementById("totalcarrito");
+    divTotal.innerHTML = "";
+    total = eCarrito.calcularTotal ();
 
-    let encontrados = productos.filter((producto) => producto.model.toLowerCase().indexOf(model.toLocaleLowerCase())!==-1);
+    divTotal.innerHTML = "TOTAL: $" + total.toFixed(2);
 }
 
-function registroUsuario ()
+function btnsCarrito ()
 {
-    let datoNombre = prompt("Ingresa tu nombre y apeliido");
-    localStorage.setItem("NOMBRE Y APELLIDO", datoNombre);
-
-    let datoUsuario = prompt("Ingresa tu usuario");
-    localStorage.setItem("USER", datoUsuario);
-
-    let datoMail = prompt("Ingresa mail");
-    localStorage.setItem("MAIL", datoMail);
-
-    let datoContraseña = Number(prompt("Ingresa contraseña (solo numerica)"));
-    localStorage.setItem("CLAVE", datoContraseña);
-
+    progVaciarCarrito ();
 }
 
+function progVaciarCarrito () //crear btn en index
+{
+    const btn = document.getElementById("vaciarCarrito")
+    btn.addEventListener("click", () =>{
+        eCarrito.vaciarCarrito();
+        mostrarCarrito();
+    })
+}
+
+function borrarProducto (producto)
+{
+    eCarrito.borrarProducto (producto);
+    mostrarCarrito ();
+}
