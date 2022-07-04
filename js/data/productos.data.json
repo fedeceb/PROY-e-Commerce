@@ -2,62 +2,212 @@
 
     {
         "id":1,
+        "category": "autos",
         "model": "Alfa Romeo",
         "precio": "1500",
         "image":"https://www.formula1.com/content/dam/fom-website/teams/2022/alfa-romeo.png.transform/6col/image.png"
     },
     {
         "id":2,
+        "category": "autos",
         "model": "Aston Martin",
         "precio": "1500",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/aston-martin.png.transform/6col/image.png"
     },
     {
         "id":3,
+        "category": "autos",
         "model": "McLaren",
         "precio": "1800",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/mclaren.png.transform/6col/image.png"
     },
     {
         "id":4,
+        "category": "autos",
         "model": "Williams",
         "precio": "1500",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/williams.png.transform/6col/image.png"
     },
     {
         "id":5,
+        "category": "autos",
         "model": "Alfa Tauri",
         "precio": "1800",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/alphatauri.png.transform/6col/image.png"
     },
     {
         "id":6,
+        "category": "autos",
         "model": "Ferrari",
         "precio": "2000",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/ferrari.png.transform/6col/image.png"
     },
     {
         "id":7,
+        "category": "autos",
         "model": "Mercedes",
         "precio": "2000",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/mercedes.png.transform/6col/image.png"
     },
     {
         "id":8,
+        "category": "autos",
         "model": "Alpine",
         "precio": "1800",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/alpine.png.transform/6col/image.png"
     },
     {
         "id":9,
+        "category": "autos",
         "model": "Haas",
         "precio": "1500",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/haas-f1-team.png.transform/6col/image.png"
     },
     {
         "id":10,
+        "category": "autos",
         "model": "Red Bull",
         "precio": "2500",
         "image": "https://www.formula1.com/content/dam/fom-website/teams/2022/red-bull-racing.png.transform/6col/image.png"
+    },
+    {
+        "id":11,
+        "category": "accesorios",
+        "model": "Paraguas Ferrari",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/scuderia-ferrari/parapluie-compact-scuderia-ferrari-rouge_ss4_p-12046114+u-a85sj1hghut3yc6qf0mq+v-3a4402dae3894381a86588f6159b76e4.jpg?_hv=1&w=340"
+    },
+    {
+        "id":12,
+        "category": "bags",
+        "model": "Riñonera Mercedes",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/mercedes-amg-petronas-f1-team/sac-banane-mercedes-amg-petronas-f1-de-puma-noir_ss4_p-12096351+u-vyn2tvazm1xk9econq61+v-c56911a3ee7d423cb972a350e30a7658.jpg?_hv=1&w=340"
+    },
+    {
+        "id":13,
+        "category": "bags",
+        "model": "Bolso Mercedes",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/mercedes-amg-petronas-f1-team/sac-de-sport-mercedes-amg-petronas-f1_ss4_p-13300534+u-n2otnjb8r95wr1nlow6n+v-2ee1f131a7354d1fa5b27d902d622b4c.jpg?_hv=1&w=340"
+    },
+    {
+        "id":14,
+        "category": "bags",
+        "model": "Mochila Ayrton Senna",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/fullerton-flyers/sac-%C3%A0-dos-pliable-ayrton-senna_ss4_p-12055671+u-1c5pyn49mbjhwivg79nl+v-919c3dcb2382479d818b28c06ced4ba8.jpg?_hv=1&w=340"
+    },
+    {
+        "id":15,
+        "category": "bags",
+        "model": "Mochila Scuderia Alpha Tauri",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/alphatauri/sac-%C3%A0-dos-scuderia-alpha-tauri-2021_ss4_p-12037681+u-1bp2hk5be21bi6fq2kh3+v-d0ae3b243c12483e91413dab1b9930ee.jpg?_hv=1&w=340"
+    },
+    {
+        "id":16,
+        "category": "bags",
+        "model": "Mochila Alfa Romeo Sauber",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/alfa-romeo-racing/sac-%C3%A0-dos-alfa-romeo-sauber-f1-kimi-by-west-coast-choppers-cross-seven-noir_ss4_p-12065082+u-sq6kkw3k1dmjhhdgeqne+v-daca1b8c70f74bc69d067587d7f1b8ff.jpg?_hv=1&w=340"
+    },
+    {
+        "id":17,
+        "category": "posters",
+        "model": "Poster McLaren '22 Lando Norris",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/mclaren-f1-team/affiche-mclaren-2022-lando-norris-limited-edition_ss4_p-13330497+u-13p16bkjiqaq0cm0me6e+v-a4d2b3b6b4a048ed97a721f81db7b500.jpg?_hv=1&w=340"
+    },
+    {
+        "id":18,
+        "category": "posters",
+        "model": "Poster Ayrton Senna Lotus 97T",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/fullerton-flyers/ayrton-senna-lotus-97t-superbe-noir-estoril-1985-%C3%A9dition-collector_ss4_p-13301103+u-uh06mk5qdm3t6s9de13c+v-7a54af3869264be0853e34df9b2c33f3.jpg?_hv=1&w=340"
+    },
+    {
+        "id":19,
+        "category": "posters",
+        "model": "Poster McLaren '22 Daniel Ricciardo",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/mclaren-f1-team/affiche-mclaren-2022-daniel-ricciardo-limited-edition_ss4_p-13330507+u-1e5zu8kgrphklm9r8py9+v-094d44d5baa54e2a99aad417e7b92209.jpg?_hv=1&w=340"
+    },
+    {
+        "id":20,
+        "category": "posters",
+        "model": "Poster McLaren MP4 - Senna '88",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/fullerton-flyers/affiche-mclaren-mp4/4-ayrton-senna-1988_ss4_p-11912277+u-zepohi6hm88jeghu8vd5+v-aa8af166327d41f0bd0ed9f21e2909b6.jpg?_hv=1&w=340"
+    },
+    {
+        "id":21,
+        "category": "posters",
+        "model": "Poster campeonato del mundo F1 - '21",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/formula-1-merchandise/championnat-du-monde-de-formule-1-2021-%C3%A9dition-collector_ss4_p-13309148+u-nnbabhx4ku9nshm1upd+v-37a4243870944f4e9fe6e5c15a736f75.jpg?_hv=1&w=340"
+    },
+    {
+        "id":22,
+        "category": "posters",
+        "model": "Poster calendario temporada '22",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/formula-1-merchandise/affiche-en-%C3%A9dition-limit%C3%A9e-du-calendrier-des-courses-du-championnat-du-monde-de-formule-1-2022_ss4_p-13325042+u-8cvi977vynd7gboj26g+v-810a199c45fb48f8a6f87544777aea04.jpg?_hv=1&w=340"
+    },
+    {
+        "id":23,
+        "category": "posters",
+        "model": "Poster regulaciones de autos nuevos '22",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/formula-1-merchandise/formule-1-2022-new-car-regulations-affiche-en-%C3%A9dition-limit%C3%A9e_ss4_p-13325046+u-sdc9z47tkah3k0vtwase+v-a25b876beef54879ac2a11ca25aa69b6.jpg?_hv=1&w=340"
+    },
+    {
+        "id":24,
+        "category": "posters",
+        "model": "Poster Mercedes AMG Team",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/mercedes-amg-petronas-f1-team/mercedes-amg-petronas-f1-team-8-world-constructor-championship-wins-%C3%A9dition-collector-poster_ss4_p-13306432+u-10tjrt1cmfb1asiad5d9+v-e2f4b022368840b59884b4f7bc3a9777.jpg?_hv=1&w=340"
+    },
+    {
+        "id":25,
+        "category": "accesorios",
+        "model": "Paraguas Aston Martin",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/aston-martin/aston-martin-f1-cognizant-f1-2022-official-team-telescopic-umbrella_ss4_p-13300770+u-5fyqyno9rkasqpwaz5rv+v-2998ff6ea408471caf25721378c132de.jpg?_hv=1&w=340"
+    },
+    {
+        "id":26,
+        "category": "accesorios",
+        "model": "Llavero Pirelli",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/pirelli/porte-cl%C3%A9s-pneu-dur-pirelli-rouge_ss4_p-13329457+u-2d3s4wuhs5nr3se481gj+v-77ab7d074ab74bbb82e155ff77231882.jpg?_hv=1&w=340"
+    },
+    {
+        "id":27,
+        "category": "accesorios",
+        "model": "Barbijos F1 x3",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/formula-1-merchandise/formula-1-3-pack-face-coverings-white/black/black-adults_ss4_p-12032651+u-v5ukzihqyv6mk9t2mmkf+v-4aad0f013c6e476dab80b99071cd0cb2.jpg?_hv=1&w=340"
+    },
+    {
+        "id":28,
+        "category": "accesorios",
+        "model": "Anteojos de sol F1",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/formula-1-merchandise/lunettes-de-formule-1-f1s1016-lunettes-de-soleil_ss4_p-13314740+u-hlayn5tu7jdc6g9igd3j+v-d8e6204d4ec6418087af23e868f3e8ee.jpg?_hv=1&w=340"
+    },
+    {
+        "id":29,
+        "category": "accesorios",
+        "model": "Funda F1 para samsung",
+        "precio": "1500",
+        "image": "https://images.footballfanatics.com/formula-1-merchandise/coque-de-t%C3%A9l%C3%A9phone-noire-formula-1-graphic-samsung_ss4_p-12053972+u-1ghdul7buccy38vgbp1w+v-5d3286d955ef4f878a47ad6bc56412c1.jpg?_hv=1&w=340"
+    },
+    {
+        "id":30,
+        "category": "accesorios",
+        "model": "Funda F1 para iPhone",
+        "precio": "2500",
+        "image": "https://images.footballfanatics.com/formula-1-merchandise/coque-de-t%C3%A9l%C3%A9phone-pop-graphique-formule-1-iphone_ss4_p-12053975+u-se5oyhrqzuvsh9rawbfm+v-6277ba3bd16c4acb8105e5e66df9b55a.jpg?_hv=1&w=340"
     }
 ]

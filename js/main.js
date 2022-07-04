@@ -8,7 +8,7 @@ function inicializarApp ()
 {
     botonCarrito ();
     totalCarrito ();
-    btnsCarrito ();
+    progVaciarCarrito ();
 }
 
 // FUNCIONES INICIALES
@@ -39,6 +39,15 @@ function mostrarProductos(productos)
         btn.innerHTML = "Agregar al carrito"
         mostrarCarrito();
         btn.addEventListener("click", () =>{ 
+
+            Toastify({
+                text:"Se agregó al carrito",
+                duration: 3000,
+                position: 'right',
+                gravity: 'bottom',
+                onClick: () => {mostrarCarrito();}
+            }).showToast();
+
             const productoParaCarrito = {
                 ...eShop,
                 cantidad:1,
@@ -65,74 +74,6 @@ function cargarProds (id, productos)
     console.log(objet)
 }
 
-// funciones de compra
-/*
-
-function botonCarrito ()
-{
-    const btn = document.getElementById("idcarrito");
-    btn.addEventListener("click", () =>{
-        mostrarCarrito();
-    })
-}
-
-function mostrarCarrito ()
-{
-    const divCarrito = document.getElementById("ecarrito");
-    divCarrito.innerHTML="";
-    eCarrito.productos.forEach(eShop =>{
-        const div = document.createElement("div");
-
-        const { image, model, precio} = eShop
-
-        div.innerHTML= `<img src='${image}' width="200px"/><br>
-                        ${model}<br>
-                        $${precio*eShop.cantidad}<br>
-                        Cantidad: ${eShop.cantidad}`
-
-       const btnBorrar = document.createElement("button");
-        btnBorrar.innerHTML = "Borrar articulo"
-        btnBorrar.addEventListener("click", () =>{
-            borrarProducto(eShop);
-        })
-        div.appendChild(btnBorrar);
-
-        divCarrito.appendChild(div);
-    })
-    
-    totalCarrito ();
-}
-
-function totalCarrito() //crear un div en index
-{
-    const divTotal = document.getElementById("totalcarrito");
-    divTotal.innerHTML = "";
-    total = eCarrito.calcularTotal ();
-
-    divTotal.innerHTML = "TOTAL: $" + total.toFixed(2);
-}
-
-function btnsCarrito ()
-{
-    progVaciarCarrito ();
-}
-
-function progVaciarCarrito () //crear btn en index
-{
-    const btn = document.getElementById("vaciarCarrito")
-    btn.addEventListener("click", () =>{
-        eCarrito.vaciarCarrito();
-        mostrarCarrito();
-    })
-}
-
-function borrarProducto (producto)
-{
-    eCarrito.borrarProducto(producto);
-    mostrarCarrito ();
-}
-
-*/
 /*---- FUNCIONES CARRITO ------*/ 
 
 function botonCarrito ()
@@ -178,17 +119,31 @@ function totalCarrito()
     divTotal.innerHTML = "TOTAL: $" + total.toFixed(2);
 }
 
-function btnsCarrito ()
-{
-    progVaciarCarrito ();
-}
-
 function progVaciarCarrito () //crear btn en index
 {
     const btn = document.getElementById("vaciarCarrito")
     btn.addEventListener("click", () =>{
-        eCarrito.vaciarCarrito();
-        mostrarCarrito();
+
+        swal({
+            title: "Estas seguro?",
+            text: "Si acepta, se eliminaran todos sus productos del carrito",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                
+                    swal("Todos sus productos han sido eliminados", {
+                    icon: "success",
+                    });
+                    eCarrito.vaciarCarrito();
+                    mostrarCarrito();
+                } 
+                else {
+                swal("Sus productos no se han eliminado");
+                }
+            });
     })
 }
 

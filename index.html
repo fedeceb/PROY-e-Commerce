@@ -2,39 +2,38 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <!--<script defer src="js/classes/class.js"></script>-->
     <script defer src="js/classes/carrito.class.js"></script>
     <script defer src="./js/data/productos.data.json"></script>
     <script defer src="./js/main.js"></script>
-    <!--<script defer src="js/main.js"></script>-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--<script defer src="js/main.js"></script>-->
+    
     <title>Document</title>
 </head>
 <body>
     <header>
         <h1 id="titulo" class="titulo">F1 Shop</h1>
-        
-
     </header>
 
-    <button id="btn-carrito">carrito</button><!--aplicar icono shop-->
+    <!--<select id="filtroProductos">
+        <option value="all">Todos</option>
+        <option value="autos">Autos</option>
+        <option value="accesorios">Accesorios</option>
+        <option value="posters">Posters</option>
+        <option value="mochilas">Bags</option>
+    </select>-->
 
+    <button id="btn-carrito">carrito</button><!--aplicar icono shop-->
        <div id="ecarrito" style="border: 1px solid gray"></div>
         <div id="totalcarrito" style="border: 1px solid blue"></div>
         <div id="menuCarrito" style="border: 1px solid blue">
             <button id="vaciarCarrito">Eliminar articulo</button>
         </div>
 
-    <div id="cargar-productos">
-
-    </div>
-
-    <!--<div id="cuerpo-compra">
-        <div id="ecarrito" style="border: 1px solid gray"></div>
-        <div id="totalcarrito" style="border: 1px solid blue"></div>
-        <div id="menuCarrito" style="border: 1px solid blue">
-            <button id="vaciarCarrito">Eliminar articulo</button>
-        </div>
-    </div>-->
+    <div id="cargar-productos"></div>
 </body>
 </html>
